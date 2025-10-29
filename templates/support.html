@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block title %}技术支持 - 富影科技{% endblock %}
+
+{% block content %}
+    <div class="support-container" style="margin: 30px 0;">
+        <h1 style="text-align: center; font-size: 36px; color: #333; margin-bottom: 50px;">技术支持</h1>
+        
+        <!-- 支持信息部分 -->
+        <div class="support-info" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 60px;">
+            <div class="support-item" style="flex: 1; min-width: 250px; padding: 30px; background-color: #f9f9f9; border-radius: 8px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 20px; color: #333;">📞</div>
+                <h3 style="font-size: 20px; margin-bottom: 15px;">电话支持</h3>
+                <p style="color: #666; margin-bottom: 10px;">工作时间：周一至周五 9:00-18:00</p>
+                <p style="font-size: 24px; font-weight: bold; color: #333;">400-888-8888</p>
+            </div>
+            
+            <div class="support-item" style="flex: 1; min-width: 250px; padding: 30px; background-color: #f9f9f9; border-radius: 8px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 20px; color: #333;">✉️</div>
+                <h3 style="font-size: 20px; margin-bottom: 15px;">邮件支持</h3>
+                <p style="color: #666; margin-bottom: 10px;">24小时内回复</p>
+                <p style="font-size: 18px; font-weight: bold; color: #333;">support@fuyingtech.com</p>
+            </div>
+            
+            <div class="support-item" style="flex: 1; min-width: 250px; padding: 30px; background-color: #f9f9f9; border-radius: 8px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 20px; color: #333;">💬</div>
+                <h3 style="font-size: 20px; margin-bottom: 15px;">在线客服</h3>
+                <p style="color: #666; margin-bottom: 10px;">工作时间：周一至周日 9:00-21:00</p>
+                <button style="padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">立即咨询</button>
+            </div>
+        </div>
+        
+        <!-- 常见问题 -->
+        <div class="faq-section" style="margin-bottom: 60px;">
+            <h2 style="text-align: center; font-size: 28px; color: #333; margin-bottom: 30px;">常见问题</h2>
+            
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <div class="faq-question" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px; cursor: pointer;">
+                        1. 如何选择适合我的产品系列？
+                    </div>
+                    <div class="faq-answer" style="color: #666; line-height: 1.6;">
+                        您可以根据自己的使用场景和需求来选择适合的产品系列。如果您有特定的应用场景，建议联系我们的技术支持团队，他们会根据您的具体需求提供专业的产品推荐。
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <div class="faq-question" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px; cursor: pointer;">
+                        2. 产品的保修期是多久？
+                    </div>
+                    <div class="faq-answer" style="color: #666; line-height: 1.6;">
+                        我们的标准产品保修期为12个月，从产品交付之日起计算。对于特定产品，我们提供延长保修服务，详情请咨询我们的销售团队。
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <div class="faq-question" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px; cursor: pointer;">
+                        3. 如何获取产品的技术文档？
+                    </div>
+                    <div class="faq-answer" style="color: #666; line-height: 1.6;">
+                        您可以在产品详情页面下载相关技术文档，或者通过我们的在线客服索取特定产品的详细技术资料。
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <div class="faq-question" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px; cursor: pointer;">
+                        4. 提供上门安装和培训服务吗？
+                    </div>
+                    <div class="faq-answer" style="color: #666; line-height: 1.6;">
+                        是的，对于大型设备和系统，我们提供专业的上门安装和培训服务。具体服务内容和费用将根据项目规模和地点而定，请联系我们获取详细报价。
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 联系我们表单 -->
+        <div class="contact-form-section" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 28px; color: #333; margin-bottom: 30px;">联系我们</h2>
+            
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">姓名</label>
+                        <input type="text" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">电话</label>
+                        <input type="tel" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                    </div>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">邮箱</label>
+                    <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">产品系列</label>
+                    <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                        <option value="">请选择产品系列</option>
+                        <option value="imaging">专业影像设备系列</option>
+                        <option value="control">智能控制系统系列</option>
+                        <option value="analyzer">高精度数据分析仪系列</option>
+                        <option value="monitor">实时监控设备系列</option>
+                        <option value="sensor">智能传感器系列</option>
+                        <option value="software">数据分析软件系列</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">问题描述</label>
+                    <textarea rows="6" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; resize: vertical;"></textarea>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button type="submit" style="padding: 12px 40px; background-color: #333; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">
+                        提交
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // FAQ 折叠效果
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    question.style.color = '#000';
+                } else {
+                    answer.style.display = 'none';
+                    question.style.color = '#333';
+                }
+            });
+        });
+    </script>
+{% endblock %}

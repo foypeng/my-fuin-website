@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+
+{% block title %}首页 - 富影科技{% endblock %}
+
+{% block content %}
+    <!-- 动态轮播图 -->
+    <section class="carousel-section" style="margin-top: 0;">
+        <div class="carousel-container" style="position: relative; width: 100%; height: 500px; overflow: hidden;">
+            <div class="carousel-slides" id="carouselSlides" style="display: flex; transition: transform 0.5s ease; height: 100%;">
+                <!-- 轮播图片 -->
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #f0f8ff; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #add8e6; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #1a5276; font-size: 28px;">富影科技 - 创新影像解决方案</h2>
+                            <p style="margin: 0; color: #2874a6; font-size: 18px;">专业级影像设备供应商</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #e8f4fc; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #b3d9ff; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #1976d2; font-size: 28px;">高精度数据采集系统</h2>
+                            <p style="margin: 0; color: #2196f3; font-size: 18px;">为工业应用提供可靠的数据支持</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #f5f0ff; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #d1b3ff; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #4a148c; font-size: 28px;">专业设备展示</h2>
+                            <p style="margin: 0; color: #6a1b9a; font-size: 18px;">高品质影像设备，满足专业需求</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #fff0f0; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #ffcccc; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #c62828; font-size: 28px;">品质保证</h2>
+                            <p style="margin: 0; color: #e53935; font-size: 18px;">严格质量控制，专业技术支持</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #f0fff0; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #ccffcc; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 28px;">创新研发</h2>
+                            <p style="margin: 0; color: #388e3c; font-size: 18px;">持续创新，引领行业发展</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="min-width: 100%; height: 100%; background-color: #fff9e6; display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background-color: #ffeb99; padding: 60px; border-radius: 12px; display: inline-block;">
+                            <h2 style="margin: 0 0 10px 0; color: #f57c00; font-size: 28px;">全面解决方案</h2>
+                            <p style="margin: 0; color: #ffa726; font-size: 18px;">从设备到服务的一站式支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 轮播控制按钮 -->
+            <button class="carousel-control prev" onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); background-color: rgba(255,255,255,0.8); color: #333; border: none; padding: 15px 20px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: all 0.3s ease;">‹</button>
+            <button class="carousel-control next" onclick="moveSlide(1)" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background-color: rgba(255,255,255,0.8); color: #333; border: none; padding: 15px 20px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: all 0.3s ease;">›</button>
+            <!-- 轮播指示器 -->
+            <div class="carousel-indicators" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;">
+                <button onclick="goToSlide(0)" class="indicator"></button>
+                <button onclick="goToSlide(1)" class="indicator"></button>
+                <button onclick="goToSlide(2)" class="indicator"></button>
+                <button onclick="goToSlide(3)" class="indicator"></button>
+                <button onclick="goToSlide(4)" class="indicator"></button>
+                <button onclick="goToSlide(5)" class="indicator"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设备系列展示 -->
+    <section id="equipment-series" class="product-series-section" style="margin: 50px 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px; color: #333;">设备系列</h2>
+            <div class="series-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                {% for series in series_list %}
+                <a href="/products/series/{{ series.id }}/" class="series-card" style="display: block; text-decoration: none; color: #333; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div class="series-image" style="height: 220px; background-color: {% cycle '#f0f8ff' '#f0fff0' '#f5f0ff' '#fff9e6' '#e0f7fa' '#fff0f0' %}; display: flex; align-items: center; justify-content: center;">
+                        <div style="background-color: {% cycle '#add8e6' '#ccffcc' '#d1b3ff' '#ffe082' '#80deea' '#ffcccc' %}; padding: 30px; border-radius: 4px; color: {% cycle '#1a5276' '#2e7d32' '#4a148c' '#f57c00' '#006064' '#c62828' %}; font-weight: bold; font-size: 18px;">{{ series.name }}</div>
+                    </div>
+                    <div class="series-info" style="padding: 25px; text-align: center;">
+                        <p style="margin-top: 0; color: #666;">{{ series.description }}</p>
+                    </div>
+                </a>
+                {% empty %}
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+                    <p>暂无设备系列数据</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- 轮播图JavaScript -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const prevBtn = document.querySelector('.carousel-control.prev');
+        const nextBtn = document.querySelector('.carousel-control.next');
+        let slideInterval;
+        
+        // 初始化轮播
+        function initCarousel() {
+            updateSlidePosition();
+            updateIndicators();
+            startAutoSlide();
+            
+            // 添加控制按钮悬停效果
+            if (prevBtn) {
+                prevBtn.addEventListener('mouseenter', () => {
+                    prevBtn.style.backgroundColor = 'rgba(255,255,255,1)';
+                    prevBtn.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+                });
+                prevBtn.addEventListener('mouseleave', () => {
+                    prevBtn.style.backgroundColor = 'rgba(255,255,255,0.8)';
+                    prevBtn.style.boxShadow = 'none';
+                });
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('mouseenter', () => {
+                    nextBtn.style.backgroundColor = 'rgba(255,255,255,1)';
+                    nextBtn.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+                });
+                nextBtn.addEventListener('mouseleave', () => {
+                    nextBtn.style.backgroundColor = 'rgba(255,255,255,0.8)';
+                    nextBtn.style.boxShadow = 'none';
+                });
+            }
+        }
+        
+        // 开始自动轮播
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+        }
+        
+        // 停止自动轮播
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+        
+        // 移动轮播
+        function moveSlide(direction) {
+            stopAutoSlide();
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlidePosition();
+            updateIndicators();
+            startAutoSlide();
+        }
+        
+        // 跳转到指定轮播图
+        function goToSlide(index) {
+            stopAutoSlide();
+            currentSlide = index;
+            updateSlidePosition();
+            updateIndicators();
+            startAutoSlide();
+        }
+        
+        // 更新轮播位置
+        function updateSlidePosition() {
+            const slideWidth = slides[0].offsetWidth;
+            document.getElementById('carouselSlides').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+        
+        // 更新指示器
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.style.width = '24px';
+                    indicator.style.height = '12px';
+                    indicator.style.borderRadius = '6px';
+                    indicator.style.background = '#333';
+                    indicator.style.opacity = '1';
+                } else {
+                    indicator.style.width = '12px';
+                    indicator.style.height = '12px';
+                    indicator.style.borderRadius = '50%';
+                    indicator.style.background = 'rgba(255,255,255,0.7)';
+                    indicator.style.opacity = '0.7';
+                }
+                indicator.style.border = 'none';
+                indicator.style.cursor = 'pointer';
+                indicator.style.transition = 'all 0.3s ease';
+            });
+        }
+        
+        // 卡片悬停效果
+        document.querySelectorAll('.series-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+                card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+        });
+        
+        // 页面加载后初始化
+        document.addEventListener('DOMContentLoaded', initCarousel);
+        // 窗口大小改变时更新
+        window.addEventListener('resize', updateSlidePosition);
+    </script>
+{% endblock %}

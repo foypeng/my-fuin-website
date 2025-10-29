@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}富影科技{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header style="background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 20px;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                    {% load static %}
+                    <img src="{% static 'images/logo.png' %}" alt="富影科技" style="height: 40px; width: auto;">
+                    <span style="margin-left: 10px; font-size: 20px; font-weight: bold; color: #333;">富影科技</span>
+                </a>
+            </div>
+            <nav>
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 30px;">
+                    <li><a href="/" style="text-decoration: none; color: #333; font-weight: bold; font-size: 16px; transition: all 0.3s; display: inline-block;">首页</a></li>
+                    <li><a href="/#equipment-series" style="text-decoration: none; color: #333; font-weight: bold; font-size: 16px; transition: all 0.3s; display: inline-block;">设备列表</a></li>
+                    <li><a href="/support/" style="text-decoration: none; color: #333; font-weight: bold; font-size: 16px; transition: all 0.3s; display: inline-block;">技术支持</a></li>
+                    <li><a href="/about/" style="text-decoration: none; color: #333; font-weight: bold; font-size: 16px; transition: all 0.3s; display: inline-block;">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 内容区 -->
+    <main class="content" style="min-height: 60vh; padding: 20px 0;">
+        <div class="container">
+            {% block content %}
+            <!-- 页面特定内容将在这里显示 -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer" style="background-color: #f8f9fa; padding: 30px 0; margin-top: 40px;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                <div class="footer-section" style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-top: 0; margin-bottom: 15px;">关于我们</h3>
+                    <p style="margin: 0; color: #666;">富影科技是专业的设备供应商，致力于为客户提供高质量的产品和服务。</p>
+                </div>
+                <div class="footer-section" style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-top: 0; margin-bottom: 15px;">快速链接</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 8px;"><a href="/" style="color: #666; text-decoration: none;">首页</a></li>
+                        <li style="margin-bottom: 8px;"><a href="/products/" style="color: #666; text-decoration: none;">设备列表</a></li>
+                        <li style="margin-bottom: 8px;"><a href="/support/" style="color: #666; text-decoration: none;">技术支持</a></li>
+                        <li style="margin-bottom: 8px;"><a href="/about/" style="color: #666; text-decoration: none;">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="margin-top: 0; margin-bottom: 15px;">联系方式</h3>
+                    <p style="margin: 0 0 8px 0; color: #666;">电话：0755-28091982</p>
+                    <p style="margin: 0; color: #666;">邮箱：contact@fuyingtech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center; padding-top: 20px; border-top: 1px solid #e9ecef; margin-top: 20px;">
+                <p style="margin: 0; color: #666;">&copy; 2025 富影科技. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    {% load static %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

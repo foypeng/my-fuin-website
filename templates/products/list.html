@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title|default:'产品列表' }} - 富影科技{% endblock %}
+
+{% block content %}
+    <div class="page-header" style="margin: 30px 0; text-align: center;">
+        <h1 style="font-size: 32px; color: #333; margin-bottom: 10px;">{{ title }}</h1>
+    </div>
+    
+    <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin: 40px 0;">
+        <!-- 通用产品卡片模板 -->
+        <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s;">
+            <div class="product-image" style="height: 200px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #ddd; padding: 20px; border-radius: 4px;">产品图片</div>
+            </div>
+            <div class="product-info" style="padding: 20px;">
+                <h3 style="margin: 0 0 10px 0; font-size: 20px;">产品名称</h3>
+                <p class="product-description" style="color: #666; margin-bottom: 20px;">产品详细描述和特点</p>
+                <div class="product-actions">
+                    <a href="javascript:void(0);" style="display: inline-block; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">查看详情</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s;">
+            <div class="product-image" style="height: 200px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #ddd; padding: 20px; border-radius: 4px;">产品图片</div>
+            </div>
+            <div class="product-info" style="padding: 20px;">
+                <h3 style="margin: 0 0 10px 0; font-size: 20px;">产品名称</h3>
+                <p class="product-description" style="color: #666; margin-bottom: 20px;">产品详细描述和特点</p>
+                <div class="product-actions">
+                    <a href="javascript:void(0);" style="display: inline-block; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">查看详情</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s;">
+            <div class="product-image" style="height: 200px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #ddd; padding: 20px; border-radius: 4px;">产品图片</div>
+            </div>
+            <div class="product-info" style="padding: 20px;">
+                <h3 style="margin: 0 0 10px 0; font-size: 20px;">产品名称</h3>
+                <p class="product-description" style="color: #666; margin-bottom: 20px;">产品详细描述和特点</p>
+                <div class="product-actions">
+                    <a href="javascript:void(0);" style="display: inline-block; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 返回上一页按钮 -->
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="javascript:history.back()" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; color: #333; text-decoration: none; border-radius: 4px;">返回上一页</a>
+    </div>
+    
+    <script>
+        // 添加卡片悬停效果
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = 'none';
+            });
+        });
+    </script>
+{% endblock %}
